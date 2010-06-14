@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5306A34B11C5ABBD00108828 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5306A34A11C5ABBD00108828 /* OpenGL.framework */; };
+		536CE91F11C604B8003A4FC5 /* GBKeyCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 536CE91E11C604B8003A4FC5 /* GBKeyCodes.m */; };
+		536CE92411C60A97003A4FC5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536CE92311C60A97003A4FC5 /* Carbon.framework */; };
+		536F80ED11C59F4800470FBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536F80EC11C59F4800470FBE /* Cocoa.framework */; };
+		536F80F211C59F4800470FBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536F80F011C59F4800470FBE /* InfoPlist.strings */; };
+		536F80F411C59F4800470FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 536F80F311C59F4800470FBE /* main.m */; };
+		536F80F711C59F4800470FBE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536F80F511C59F4800470FBE /* MainMenu.xib */; };
+		536F80FA11C59F4800470FBE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 536F80F811C59F4800470FBE /* Credits.rtf */; };
+		536F80FD11C59F4800470FBE /* GBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 536F80FC11C59F4800470FBE /* GBAppDelegate.m */; };
+		539FBC7211C5A218003F98EB /* GBGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 539FBC7111C5A218003F98EB /* GBGLView.m */; };
+		539FBC8311C5A9AF003F98EB /* MyGameDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 539FBC8211C5A9AF003F98EB /* MyGameDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5306A34A11C5ABBD00108828 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		5306A35011C5E1CD00108828 /* GBKeyCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBKeyCodes.h; path = Classes/GBKeyCodes.h; sourceTree = "<group>"; };
+		536CE91E11C604B8003A4FC5 /* GBKeyCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBKeyCodes.m; path = Classes/GBKeyCodes.m; sourceTree = "<group>"; };
+		536CE92311C60A97003A4FC5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		536F80E911C59F4800470FBE /* ObjCGameBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCGameBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		536F80EC11C59F4800470FBE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		536F80EE11C59F4800470FBE /* ObjCGameBase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCGameBase-Info.plist"; sourceTree = "<group>"; };
+		536F80F111C59F4800470FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		536F80F311C59F4800470FBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		536F80F611C59F4800470FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		536F80F911C59F4800470FBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		536F80FB11C59F4800470FBE /* GBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAppDelegate.h; sourceTree = "<group>"; };
+		536F80FC11C59F4800470FBE /* GBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBAppDelegate.m; sourceTree = "<group>"; };
+		539FBC7011C5A218003F98EB /* GBGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGLView.h; sourceTree = "<group>"; };
+		539FBC7111C5A218003F98EB /* GBGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGLView.m; sourceTree = "<group>"; };
+		539FBC8011C5A66B003F98EB /* GBGameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGameDelegate.h; sourceTree = "<group>"; };
+		539FBC8111C5A9AF003F98EB /* MyGameDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGameDelegate.h; sourceTree = "<group>"; };
+		539FBC8211C5A9AF003F98EB /* MyGameDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGameDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		536F80E611C59F4800470FBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536F80ED11C59F4800470FBE /* Cocoa.framework in Frameworks */,
+				5306A34B11C5ABBD00108828 /* OpenGL.framework in Frameworks */,
+				536CE92411C60A97003A4FC5 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		536F80DA11C59F4800470FBE = {
+			isa = PBXGroup;
+			children = (
+				536CE92311C60A97003A4FC5 /* Carbon.framework */,
+				536F80E111C59F4800470FBE /* Classes */,
+				536F80E211C59F4800470FBE /* Other Sources */,
+				536F80E311C59F4800470FBE /* Resources */,
+				536F80E411C59F4800470FBE /* Frameworks */,
+				536F80EA11C59F4800470FBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		536F80E111C59F4800470FBE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				539FBC8111C5A9AF003F98EB /* MyGameDelegate.h */,
+				539FBC8211C5A9AF003F98EB /* MyGameDelegate.m */,
+				539FBC8011C5A66B003F98EB /* GBGameDelegate.h */,
+				536F80FB11C59F4800470FBE /* GBAppDelegate.h */,
+				536F80FC11C59F4800470FBE /* GBAppDelegate.m */,
+				539FBC7011C5A218003F98EB /* GBGLView.h */,
+				539FBC7111C5A218003F98EB /* GBGLView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		536F80E211C59F4800470FBE /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5306A35011C5E1CD00108828 /* GBKeyCodes.h */,
+				536CE91E11C604B8003A4FC5 /* GBKeyCodes.m */,
+				536F80F311C59F4800470FBE /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		536F80E311C59F4800470FBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				536F80EE11C59F4800470FBE /* ObjCGameBase-Info.plist */,
+				536F80F011C59F4800470FBE /* InfoPlist.strings */,
+				536F80F511C59F4800470FBE /* MainMenu.xib */,
+				536F80F811C59F4800470FBE /* Credits.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		536F80E411C59F4800470FBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				536F80EC11C59F4800470FBE /* Cocoa.framework */,
+				5306A34A11C5ABBD00108828 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		536F80EA11C59F4800470FBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				536F80E911C59F4800470FBE /* ObjCGameBase.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		536F80E811C59F4800470FBE /* ObjCGameBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536F810011C59F4800470FBE /* Build configuration list for PBXNativeTarget "ObjCGameBase" */;
+			buildPhases = (
+				536F80E511C59F4800470FBE /* Sources */,
+				536F80E611C59F4800470FBE /* Frameworks */,
+				536F80E711C59F4800470FBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjCGameBase;
+			productName = ObjCGameBase;
+			productReference = 536F80E911C59F4800470FBE /* ObjCGameBase.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		536F80DC11C59F4800470FBE /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 536F80DF11C59F4800470FBE /* Build configuration list for PBXProject "ObjCGameBase" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 536F80DA11C59F4800470FBE;
+			productRefGroup = 536F80EA11C59F4800470FBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				536F80E811C59F4800470FBE /* ObjCGameBase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		536F80E711C59F4800470FBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536F80F211C59F4800470FBE /* InfoPlist.strings in Resources */,
+				536F80F711C59F4800470FBE /* MainMenu.xib in Resources */,
+				536F80FA11C59F4800470FBE /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		536F80E511C59F4800470FBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536F80F411C59F4800470FBE /* main.m in Sources */,
+				536F80FD11C59F4800470FBE /* GBAppDelegate.m in Sources */,
+				539FBC7211C5A218003F98EB /* GBGLView.m in Sources */,
+				539FBC8311C5A9AF003F98EB /* MyGameDelegate.m in Sources */,
+				536CE91F11C604B8003A4FC5 /* GBKeyCodes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		536F80F011C59F4800470FBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536F80F111C59F4800470FBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		536F80F511C59F4800470FBE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536F80F611C59F4800470FBE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		536F80F811C59F4800470FBE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536F80F911C59F4800470FBE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		536F80FE11C59F4800470FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		536F80FF11C59F4800470FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		536F810111C59F4800470FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "ObjCGameBase-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Werror",
+				);
+				PRODUCT_NAME = ObjCGameBase;
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		536F810211C59F4800470FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "ObjCGameBase-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Werror",
+				);
+				PRODUCT_NAME = ObjCGameBase;
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		536F80DF11C59F4800470FBE /* Build configuration list for PBXProject "ObjCGameBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536F80FE11C59F4800470FBE /* Debug */,
+				536F80FF11C59F4800470FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		536F810011C59F4800470FBE /* Build configuration list for PBXNativeTarget "ObjCGameBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536F810111C59F4800470FBE /* Debug */,
+				536F810211C59F4800470FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 536F80DC11C59F4800470FBE /* Project object */;
+}
