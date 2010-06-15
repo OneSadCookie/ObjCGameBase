@@ -19,4 +19,6 @@
 @property (readonly) unsigned    glType;
 @property (readonly) NSData     *data;
 
+- (void)releaseImageData;
+
 @end

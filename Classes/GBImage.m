@@ -171,4 +171,10 @@ static BOOL _findGLFormat(NSURL *url, CGImageRef image, unsigned *glInternalForm
 
 @synthesize size, glInternalFormat, glFormat, glType, data;
 
+- (void)releaseImageData
+{
+    [data release];
+    data = nil;
+}
+
 @end

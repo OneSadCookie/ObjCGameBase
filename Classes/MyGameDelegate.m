@@ -42,6 +42,7 @@
         [image glFormat],
         [image glType],
         [[image data] bytes]);
+    [image releaseImageData];
 }
 
 - (void)update:(double)dt
