@@ -2,6 +2,8 @@
 
 @protocol GBGameDelegate <NSObject>
 
+- (void)gameDidLoad;
+
 - (void)update:(double)dt;
 - (void)drawAtSize:(NSSize)size;
 

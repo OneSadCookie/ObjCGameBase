@@ -71,6 +71,7 @@ static NSOpenGLPixelFormatAttribute GBGLAttributes[] =
         machTimeScale = 0.000000001 * ((double)timebase.numer / (double)timebase.denom);
         lastFrameTime = (double)mach_absolute_time() * machTimeScale;
     
+        // ability to get modifier flags independent of event stream is new in 10.6
         if ([NSEvent respondsToSelector:@selector(modifierFlags)])
         {
             modifierFlags = [NSEvent modifierFlags];
@@ -79,6 +80,11 @@ static NSOpenGLPixelFormatAttribute GBGLAttributes[] =
         [self.context setView:self];
         
         [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(doOneFrame) userInfo:nil repeats:YES];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resize:) name:NSViewFrameDidChangeNotification object:self];
+        
+        [self.context makeCurrentContext];
+        [self.delegate gameDidLoad];
         
         firstFrame = NO;
     }
@@ -91,6 +97,11 @@ static NSOpenGLPixelFormatAttribute GBGLAttributes[] =
     [self.context makeCurrentContext];
     [self.delegate drawAtSize:[self bounds].size];
     [self.context flushBuffer];
+}
+
+- (void)resize:(NSNotification *)note
+{
+    [self.context update];
 }
 
 - (void)drawRect:(NSRect)dirtyRect
@@ -110,8 +121,8 @@ static NSOpenGLPixelFormatAttribute GBGLAttributes[] =
 
 - (void)flagsChanged:(NSEvent *)e
 {
-    NSUInteger flags = [e modifierFlags];
-    if (flags > modifierFlags)
+    NSUInteger newFlags = [e modifierFlags];
+    if (newFlags > modifierFlags)
     {
         [self.delegate keyDown:[e keyCode]];
     }
@@ -119,7 +130,7 @@ static NSOpenGLPixelFormatAttribute GBGLAttributes[] =
     {
         [self.delegate keyUp:[e keyCode]];
     }
-    modifierFlags = flags;
+    modifierFlags = newFlags;
 }
 
 @end

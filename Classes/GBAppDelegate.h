@@ -2,7 +2,7 @@
 
 @class GBGLView;
 
-@interface GBAppDelegate : NSObject
+@interface GBAppDelegate : NSObject <NSApplicationDelegate>
 {
     NSWindow *window;
     GBGLView *view;

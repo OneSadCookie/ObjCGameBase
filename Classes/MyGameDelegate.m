@@ -1,5 +1,6 @@
 #import <OpenGL/gl.h>
 
+#import "GBImage.h"
 #import "GBKeyCodes.h"
 
 #import "MyGameDelegate.h"
@@ -21,6 +22,28 @@
     [super dealloc];
 }
 
+- (void)gameDidLoad
+{
+    image = [[GBImage alloc] initWithURL:[NSURL fileURLWithPath:@"/Library/Desktop Pictures/Nature/Summit.jpg"]];
+    if (!image) abort();
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_RECTANGLE_ARB, texture);
+    glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexImage2D(
+        GL_TEXTURE_RECTANGLE_ARB,
+        0,
+        [image glInternalFormat],
+        [image size].width,
+        [image size].height,
+        0,
+        [image glFormat],
+        [image glType],
+        [[image data] bytes]);
+}
+
 - (void)update:(double)dt
 {
     static int frames = 0;
@@ -39,6 +62,18 @@
 {
     glViewport(0, 0, size.width, size.height);
     glClear(GL_COLOR_BUFFER_BIT);
+    
+    glEnable(GL_TEXTURE_RECTANGLE_ARB);
+    glBegin(GL_QUADS);
+        glTexCoord2f(0, [image size].height);
+        glVertex2f(-1, -1);
+        glTexCoord2f([image size].width, [image size].height);
+        glVertex2f( 1, -1);
+        glTexCoord2f([image size].width, 0);
+        glVertex2f( 1,  1);
+        glTexCoord2f(0, 0);
+        glVertex2f(-1,  1);
+    glEnd();
 }
 
 - (void)keyDown:(unsigned)keyCode

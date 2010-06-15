@@ -10,6 +10,7 @@
 		5306A34B11C5ABBD00108828 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5306A34A11C5ABBD00108828 /* OpenGL.framework */; };
 		536CE91F11C604B8003A4FC5 /* GBKeyCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 536CE91E11C604B8003A4FC5 /* GBKeyCodes.m */; };
 		536CE92411C60A97003A4FC5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536CE92311C60A97003A4FC5 /* Carbon.framework */; };
+		536CE93C11C7280A003A4FC5 /* GBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 536CE93B11C7280A003A4FC5 /* GBImage.m */; };
 		536F80ED11C59F4800470FBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536F80EC11C59F4800470FBE /* Cocoa.framework */; };
 		536F80F211C59F4800470FBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536F80F011C59F4800470FBE /* InfoPlist.strings */; };
 		536F80F411C59F4800470FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 536F80F311C59F4800470FBE /* main.m */; };
@@ -24,7 +25,9 @@
 		5306A34A11C5ABBD00108828 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		5306A35011C5E1CD00108828 /* GBKeyCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBKeyCodes.h; path = Classes/GBKeyCodes.h; sourceTree = "<group>"; };
 		536CE91E11C604B8003A4FC5 /* GBKeyCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBKeyCodes.m; path = Classes/GBKeyCodes.m; sourceTree = "<group>"; };
-		536CE92311C60A97003A4FC5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		536CE92311C60A97003A4FC5 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Xcode4/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		536CE93A11C7280A003A4FC5 /* GBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBImage.h; sourceTree = "<group>"; };
+		536CE93B11C7280A003A4FC5 /* GBImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBImage.m; sourceTree = "<group>"; };
 		536F80E911C59F4800470FBE /* ObjCGameBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCGameBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536F80EC11C59F4800470FBE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		536F80EE11C59F4800470FBE /* ObjCGameBase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCGameBase-Info.plist"; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		536F80DA11C59F4800470FBE = {
 			isa = PBXGroup;
 			children = (
-				536CE92311C60A97003A4FC5 /* Carbon.framework */,
 				536F80E111C59F4800470FBE /* Classes */,
 				536F80E211C59F4800470FBE /* Other Sources */,
 				536F80E311C59F4800470FBE /* Resources */,
@@ -70,6 +72,8 @@
 		536F80E111C59F4800470FBE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				536CE93A11C7280A003A4FC5 /* GBImage.h */,
+				536CE93B11C7280A003A4FC5 /* GBImage.m */,
 				539FBC8111C5A9AF003F98EB /* MyGameDelegate.h */,
 				539FBC8211C5A9AF003F98EB /* MyGameDelegate.m */,
 				539FBC8011C5A66B003F98EB /* GBGameDelegate.h */,
@@ -107,6 +111,7 @@
 			children = (
 				536F80EC11C59F4800470FBE /* Cocoa.framework */,
 				5306A34A11C5ABBD00108828 /* OpenGL.framework */,
+				536CE92311C60A97003A4FC5 /* Carbon.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				539FBC7211C5A218003F98EB /* GBGLView.m in Sources */,
 				539FBC8311C5A9AF003F98EB /* MyGameDelegate.m in Sources */,
 				536CE91F11C604B8003A4FC5 /* GBKeyCodes.m in Sources */,
+				536CE93C11C7280A003A4FC5 /* GBImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

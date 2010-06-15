@@ -59,8 +59,8 @@
 #define GB_KEYBOARD_DELETE_OR_BACKSPACE         0x33
                                              /* 0x34 */
 #define GB_KEYBOARD_ESCAPE                      0x35
-#define GB_KEYBOARD_RIGHT_GUI                   0x36
-#define GB_KEYBOARD_LEFT_GUI                    0x37
+#define GB_KEYBOARD_RIGHT_COMMAND               0x36
+#define GB_KEYBOARD_LEFT_COMMAND                0x37
 #define GB_KEYBOARD_LEFT_SHIFT                  0x38
                                              /* 0x39 */
 #define GB_KEYBOARD_LEFT_ALT                    0x3a
