@@ -24,7 +24,7 @@
 
 - (void)gameDidLoad
 {
-    image = [[GBImage alloc] initWithURL:[NSURL fileURLWithPath:@"/Library/Desktop Pictures/Nature/Summit.jpg"]];
+    image = [[GBImage alloc] initWithURL:[NSURL fileURLWithPath:@"/Library/User Pictures/Nature/Lightning.tif"]];
     if (!image) abort();
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_RECTANGLE_ARB, texture);
