@@ -63,17 +63,18 @@
 {
     glViewport(0, 0, size.width, size.height);
     glClear(GL_COLOR_BUFFER_BIT);
-    
+    float x_offset = 1.0f / (((float)size.width) / ((float)[image size].width));
+	float y_offset = 1.0f / (((float)size.height) / ((float)[image size].height));
     glEnable(GL_TEXTURE_RECTANGLE_ARB);
     glBegin(GL_QUADS);
         glTexCoord2f(0, [image size].height);
-        glVertex2f(-1, -1);
+        glVertex2f(-x_offset, -y_offset);
         glTexCoord2f([image size].width, [image size].height);
-        glVertex2f( 1, -1);
+        glVertex2f( x_offset, -y_offset);
         glTexCoord2f([image size].width, 0);
-        glVertex2f( 1,  1);
+        glVertex2f( x_offset,  y_offset);
         glTexCoord2f(0, 0);
-        glVertex2f(-1,  1);
+        glVertex2f(-x_offset,  y_offset);
     glEnd();
 }
 
